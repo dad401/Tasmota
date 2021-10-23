@@ -175,6 +175,7 @@ enum UserSelectablePins {
   GPIO_BL0939_RX,                      // BL0939 Serial interface (Dual R3 v2)
   GPIO_BL0942_RX,                      // BL0942 Serial interface
   GPIO_HM330X_SET,                     // HM330X SET pin (sleep when low)
+  GPIO_SDM230_TX, GPIO_SDM230_RX,      // SDM230 Serial interface
   GPIO_SENSOR_END };
 
 enum ProgramSelectablePins {
@@ -369,7 +370,8 @@ const char kSensorNames[] PROGMEM =
   D_SENSOR_VINDRIKTNING_RX "|"
   D_SENSOR_BL0939_RX "|"
   D_SENSOR_BL0942_RX "|"
-  D_SENSOR_HM330X_SET
+  D_SENSOR_HM330X_SET "|"
+  D_SENSOR_SDM230_TX "|" D_SENSOR_SDM230_RX
   ;
 
 const char kSensorNamesFixed[] PROGMEM =
@@ -718,6 +720,10 @@ const uint16_t kGpioNiceList[] PROGMEM = {
   AGPIO(GPIO_SDM72_RX),      // SDM72 Serial interface
 #endif
   AGPIO(GPIO_ZEROCROSS),
+#ifdef USE_SDM230
+  AGPIO(GPIO_SDM230_TX),      // SDM230 Serial interface
+  AGPIO(GPIO_SDM230_RX),      // SDM230 Serial interface
+#endif
 #endif  // USE_ENERGY_SENSOR
 
 /*-------------------------------------------------------------------------------------------*\

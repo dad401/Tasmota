@@ -75,6 +75,7 @@ m = minimal, l = lite, t = tasmota, k = knx, s = sensors, i = ir, d = display
 | USE_MCP39F501         | - | x | x / - | x | x | - | - |
 | USE_SDM72             | - | - | - / x | - | x | - | - |
 | USE_SDM120            | - | - | - / x | - | x | - | - |
+| USE_SDM230            | - | - | - / x | - | x | - | - |
 | USE_SDM630            | - | - | - / x | - | x | - | - |
 | USE_DDS2382           | - | - | - / x | - | x | - | - |
 | USE_DDSU666           | - | - | - / x | - | x | - | - |
