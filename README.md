@@ -1,5 +1,11 @@
 ![Tasmota logo](/tools/logo/TASMOTA_FullLogo_Vector.svg)
 
+<hr></hr>
+
+This is a feature branch of Tasmota trying to implement suppport for Hoymiles inverters using [lumapus](https://github.com/lumapu/ahoy/tree/main/tools/esp8266) as a base:
+
+<hr></hr>
+
 Alternative firmware for [ESP8266](https://en.wikipedia.org/wiki/ESP8266) and [ESP32](https://en.wikipedia.org/wiki/ESP32) based devices with **easy configuration using webUI, OTA updates, automation using timers or rules, expandability and entirely local control over MQTT, HTTP, Serial or KNX**.
 _Written for PlatformIO._
 

@@ -188,6 +188,7 @@ enum UserSelectablePins {
   GPIO_MS01,                           // Sonoff MS01 Moisture Sensor 1wire interface
   GPIO_SDIO_CMD, GPIO_SDIO_CLK, GPIO_SDIO_D0, GPIO_SDIO_D1, GPIO_SDIO_D2, GPIO_SDIO_D3, // SD Card SDIO interface, including 1-bit and 4-bit modes
   GPIO_FLOWRATEMETER_IN,               // Flowrate Meter
+  GPIO_NRF24_IRQ,                      // Interrupt for NRF24 HOYMILES-Receiver
   GPIO_SENSOR_END };
 
 enum ProgramSelectablePins {
@@ -420,6 +421,7 @@ const char kSensorNames[] PROGMEM =
   D_SENSOR_SDIO_D2 "|"
   D_SENSOR_SDIO_D3 "|"
   D_SENSOR_FLOWRATEMETER "|"
+  D_SENSOR_NRF24_IRQ "|"
   ;
 
 const char kSensorNamesFixed[] PROGMEM =
@@ -520,6 +522,9 @@ const uint16_t kGpioNiceList[] PROGMEM = {
 #ifdef USE_NRF24
   AGPIO(GPIO_NRF24_CS),
   AGPIO(GPIO_NRF24_DC),
+#endif
+#ifdef USE_HOYMILES
+  AGPIO(GPIO_NRF24_IRQ),
 #endif
 #ifdef USE_RC522
   AGPIO(GPIO_RC522_CS),                 // RC522 Rfid Chip Select

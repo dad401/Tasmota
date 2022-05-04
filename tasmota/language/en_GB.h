@@ -869,6 +869,7 @@
 #define D_SENSOR_CM11_TX       "CM110x TX"
 #define D_SENSOR_CM11_RX       "CM110x RX"
 #define D_SENSOR_FLOWRATEMETER "Flowrate"
+#define D_SENSOR_NRF24_IRQ     "NRF24 IRQ"
 
 // Units
 #define D_UNIT_AMPERE "A"
